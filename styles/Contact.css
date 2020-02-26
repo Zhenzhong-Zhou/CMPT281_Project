@@ -1,0 +1,383 @@
+@font-face {
+    font-family: "Eusthalia Sans Slant";
+    src: url("../Fonts/eusthalia_sans_slant-webfont.woff") format("woff"),
+        url("../Fonts/Eusthalia Sans Slant.otf") format("opentype"),
+        url("../Fonts/eusthalia_sans_slant-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato Light";
+    src: url("../Fonts/lato-light-webfont.woff") format("woff"),
+        url("../Fonts/Lato-Light.ttf") format("ttf"),
+        url("../Fonts/lato-light-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Odachi";
+    src: url("../Fonts/odachi-webfont.woff") format("woff"), url("../Fonts/Odachi.otf") format("ttf"),
+        url("../Fonts/odachi-webfont.woff2") format("woff2");
+}
+
+body {
+    background: #FFFF;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav {
+    width: 50%;
+    position: absolute;
+    display: inline;
+    height: 4vw;
+    top: 2vw;
+    left: 0.5vw;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+    left: 0;
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-item {
+    position: relative;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.25vw;
+    margin-left: 2vw;
+    float: left;
+    text-align: left;
+    z-index: 1;
+}
+
+.menu-item::after {
+    position: absolute;
+    bottom: -10%;
+    height: 40%;
+    content: '';
+    background-color: #EADFC0;
+    left: -10%;
+    width: 120%;
+    z-index: -1;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #300306;
+}
+
+.menu-item a:hover::after {
+    position: absolute;
+    bottom: -22%;
+    height: 40%;
+    content: '';
+    background-color: #DA4E31;
+    left: -10%;
+    width: 120%;
+    z-index: 0;
+}
+
+#itemCount {
+    position: absolute;
+    display: none;
+    top: 1.5vw;
+    right: -28.6vw;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8vw;
+    font-weight: 600;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: "Eusthalia Sans Slant";
+}
+
+.header-banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.header-banners-inside {
+    position: relative;
+    display: inline-block;
+    float: left;
+    background-image: url("../Photos/Header - Coffee Cup - Wide.png");
+    background-size: cover;
+    width: 60vw;
+    height: 32.5vw;
+    left: 0%;
+    text-align: center;
+}
+
+.header-banner-text-inside {
+    position: absolute;
+    top: 16%;
+    left: 35%;
+    width: 35%;
+    height: 55%;
+    font-family: "Odachi", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.small-text-inside {
+    font-size: 8vw;
+}
+
+.large-text-inside {
+    position: absolute;
+    top: 24%;
+    left: 6%;
+    font-size: 14vw;
+}
+
+.menu-item-cart-underline {
+    position: absolute;
+    top: 3.85vw;
+    left: 56.5vw;
+    width: 2.6vw;
+    height: 0.75vw;
+    background-color: #EADFC0;
+    z-index: 0;
+}
+
+.menu-item-cart {
+    position: absolute;
+    top: 2.4vw;
+    left: 57vw;
+    width: 1.75vw;
+    height: 2vw;
+    background-image: url("../Icons/Cart.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.feature1 {
+    text-align: center;
+    margin-top: 5%;
+    /*leave or not?*/
+}
+
+.feature-text1 {
+    position: relative;
+    display: inline;
+    font-family: "Odachi";
+    font-size: 10vw;
+}
+
+.feature-text1::after {
+    position: absolute;
+    bottom: 13%;
+    height: 26%;
+    content: '';
+    background-color: #EADFC0;
+    left: -6.5%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 108%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.feature2 {
+    position: relative;
+    padding-top: 0.5vw;
+    display: block;
+    text-align: center;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+    margin-bottom: 6vw;
+}
+
+#content-2 {
+    /*    background-color: red;*/
+    text-align: center;
+    height: 55vh;
+    position: relative;
+    margin-top: 20px;
+}
+
+.inputInfor {
+    background-color: #DBDBDB;
+    height: 2vw;
+    width: 22vw;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#first {
+    position: absolute;
+    left: 16.5%;
+    font-size: 1.5vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#last {
+    position: absolute;
+    right: 20%;
+    top: 0;
+    font-size: 1.5vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#email {
+    position: absolute;
+    left: 16.5%;
+    top: 15%;
+    font-size: 1.5vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#number {
+    position: absolute;
+    right: 20%;
+    top: 15%;
+    font-size: 1.5vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#message {
+    background-color: #DBDBDB;
+    position: absolute;
+    left: 16.6%;
+    top: 30%;
+    width: 62.5vw;
+    height: 15vw;
+    font-size: 20pt;
+    font-family: monospace;
+    color: chocolate;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#submit {
+    background-color: #300C06;
+    color: #EADFC0;
+    font-size: 1vw;
+    font-family: Eusthalia Sans Slant;
+    font-weight: 100;
+    height: 2vw;
+    width: 6vw;
+    padding: 0;
+    position: absolute;
+    top: 90%;
+    left: 47%;
+}
+
+::placeholder {
+    color: #300C06;
+    opacity: 1;
+    font-size: 2vh;
+    font-family: Eusthalia Sans Slant;
+    font-weight: 100;
+}
+
+.text-rhs {
+    font-family: "Eusthalia Sans Slant", sans-serif;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+}
+
+.banner-3 {
+    position: relative;
+    width: 78vw;
+    margin-top: 17vw;
+    left: 22vw;
+    height: 24vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+}
+
+.banner-3-image {
+    position: absolute;
+    bottom: 5vw;
+    left: -8vw;
+    width: 68vw;
+    z-index: 10;
+}
+
+.banner-3-text {
+    position: absolute;
+    font-size: 1.75vw;
+    top: 12vw;
+    left: 32vw;
+    z-index: 10;
+}
+
+.banner-3-text::after {
+    position: absolute;
+    bottom: -4%;
+    height: 45%;
+    content: '';
+    background-color: #DA4E31;
+    top: 60%;
+    left: -1%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 103%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.footer {
+    position: relative;
+    background-color: #300306;
+    height: 10vw;
+    width: 101%;
+}
+
+.copyRight {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 2vw;
+    left: 14.3vw;
+}
+
+.address {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 4.5vw;
+    left: 14.3vw;
+}
+
+.photo-by {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 2.5vw;
+    right: 18vw;
+    text-align: right;
+}
+
+.author {
+    color: white;
+    font-family: "Lato Light";
+    font-size: 1vw;
+    position: absolute;
+    top: 4.3vw;
+    right: 18vw;
+    text-align: right;
+}

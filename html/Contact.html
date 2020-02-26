@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>No Milk</title>
+    <link rel=stylesheet type="text/css" href="../styles/Contact.css">
+    <link rel="shortcut icon" href="../Photos/Header%20-%20Coffee%20Cup.png">
+    <script src="../scripts/NoMilkStyles.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="../scripts/ShoppingCart.js"></script>
+    <script src="../scripts/ShoppingCartFunctions.js"></script>
+</head>
+
+<body>
+    <div class=header-banner-container>
+        <div class=header-banners-inside>
+            <nav>
+                <ul>
+                    <li class="menu-item"><a href="HomePage.html">Home</a></li>
+                    <li class="menu-item"><a href="Shop.html">Shop</a></li>
+                    <li class="menu-item"><a href="Contact.html">Contact</a></li>
+                    <div>
+                        <span id="itemCount"></span>
+                    </div>
+                </ul>
+            </nav>
+            <a href="Cart.html">
+                <div class=menu-item-cart-underline>
+                </div> <!-- end menu-item-cart-underline-->
+                <div class=menu-item-cart>
+                </div> <!-- end menu-item cart-->
+            </a>
+            <div class="header-banner-text-inside">
+                <div class=small-text-inside>No</div>
+                <div class=large-text-inside>Milk</div>
+            </div>
+        </div> <!-- end of .header-banner-->
+        <script>
+            contactPageElements();
+        </script>
+    </div> <!-- end header-banner-container -->
+    <div class=clearboth></div>
+    <div class="feature1">
+        <div class="feature-text1">COntact</div>
+    </div> <!-- end of feature -->
+
+    <div id="content-2">
+        <form action="/action_page.php" id="usrform">
+            <input type="text" name="firstname" placeholder="FIRST NAME" id="first" class="inputInfor"><br>
+            <input type="text" name="lastname" placeholder="LAST NAME" id="last" class="inputInfor"><br>
+            <input type="text" name="email" placeholder="EMAIL ADDRESS" id="email" class="inputInfor"><br>
+            <input type="text" name="number" placeholder="PHONE NUMBER" id="number" class="inputInfor"><br>
+            <input type="submit" value="SUBMIT" id="submit">
+        </form>
+        <br><textarea rows="4" cols="50" name="comment" form="usrform" id="message" placeholder="MESSAGE"></textarea>
+    </div>
+
+
+    <div class="banner-3">
+        <img class="banner-3-image" src="../Photos/Footer%20-%20Map.png">
+        <span class="banner-3-text">
+            107 - 117 SCIENCE PLACE
+        </span>
+    </div>
+
+    <div class="footer">
+        <span class="copyRight">
+            &#9400; NO NILK COFFEE
+        </span>
+        <span class="address">
+            107 - 117 SCIENCE PLACE
+            <br>SASKATOON, SK
+        </span>
+        <span class="photo-by">
+            PHOTOGRAPHY BY
+        </span>
+        <span class="author">
+            Visualhunt
+            <br>Stumptown Coffee Roasters
+        </span>
+    </div>
+
+    <script>
+        setCart();
+        displayCart();
+    </script>
+</body>
+</html>

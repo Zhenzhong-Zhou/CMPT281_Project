@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>No Milk</title>
+    <link rel=stylesheet type="text/css" href="../styles/HomePage.css">
+    <link rel="shortcut icon" href="../Photos/Header%20-%20Coffee%20Cup.png">
+    <script src="../scripts/NoMilkStyles.js"></script>
+    <link type="text/javascripts" src="../scripts/NoMilkStyles.js">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="../scripts/ShoppingCart.js"></script>
+    <script src="../scripts/ShoppingCartFunctions.js"></script>
+</head>
+
+<body>
+    <div class=header-banner-container>
+        <div id=header-banner-home>
+            <nav>
+                <ul>
+                    <li class="menu-item"><a href="HomePage.html">Home</a></li>
+                    <li class="menu-item"><a href="Shop.html">Shop</a></li>
+                    <li class="menu-item"><a href="Contact.html">Contact</a></li>
+                    <div>
+                        <span id="itemCount"></span>
+                    </div>
+                </ul>
+            </nav>
+            <a href="Cart.html">
+                <div class=menu-item-cart-underline>
+                </div> <!-- end menu-item-cart-underline-->
+                <div class=menu-item-cart>
+                </div> <!-- end menu-item cart-->
+            </a>
+            <div class="header-banner-text-home">
+                <div class="small-text">No</div>
+                <div class=large-text>Milk</div>
+            </div>
+        </div> <!-- end of .header-banner-->
+        <script>
+            homePageElements();
+        </script>
+    </div> <!-- end header-banner-container -->
+    <div class=clearboth></div>
+
+    <div class="feature1">
+        <div><span class="feature-text1">coffee</span></div>
+    </div> <!-- end of feature -->
+    <div class="feature2">
+        <div>BREWED TO ORDER</div>
+    </div> <!-- end of feature3 -->
+
+    <div class=coffee-menu>
+    </div>
+    <script>
+        createCoffeeMenu();
+    </script>
+    <div class=clearboth></div>
+
+    <div class="banner-1">
+        <span class="banner-1-subtitle">
+            Proudly serving
+        </span>
+        <img class="banner-1-image" src="../Photos/Shop%20-%20French%20Roast.png">
+        <span class="banner-1-title">
+            Stumptown Coffee
+        </span>
+        <button class="bannerBtn"><a href="Shop.html">
+                Shop Now <img class="arrow" src="../Icons/Chevron-Right.svg">
+            </a></button>
+    </div>
+
+    <div class="feature1">
+        <div><span class="feature-text1">sandwiches</span></div>
+    </div>
+    <div class="feature2">
+        <div>FRESH AND LOCAL</div>
+    </div>
+
+    <div class="sandMenu">
+        <div class="row">
+            <li>TACO IN A BUN <span id="food">8</span></li>
+            <p class="bun">Braised Beef in adobo sauce, arugula,
+                pickled onion, jalapeno, and feta.</p>
+        </div>
+
+        <div class="row1">
+            <li>SUN RISE <span id="food1">6</span>
+                <p class="sun">Chorizo, sweet potato, sage, avocado, onion,
+                    radish, fried egg, sweet chili mayo.</p>
+            </li>
+        </div>
+
+        <div class="row2">
+            <li>THE SUNFLOWER <span id="food2">7</span></li>
+            <p class="flower">Grilled chicken with sprouts, avocado,
+                charred red pepper, cucumber,
+                and roasted garlic hummus.</p>
+        </div>
+
+        <div class="row3">
+            <li>BUTCHER BLOCK <span id="food3">9</span></li>
+            <p class="block">Slow roasted porchetta with pesto, arugula,
+                shallots, caramelized onion, and asiago.</p>
+        </div>
+
+    </div>
+
+    <div class=clearboth></div>
+
+    <div class="banner-2">
+        <span class="banner-2-header">
+            Locally Owned
+        </span>
+        <img class="banner-2-image" src="../Photos/Feature%20-%20Indoor%20Photo.png">
+        <span class="banner-2-text">
+            We're proud to be from Saskatoon, serving <br>
+            Saskatoon. Using local market ingredients and <br>
+            legendary beans, we're elevating what it <br>
+            means to be a coffee shop. Come see what <br>
+            we're about, and let us make you a drink.
+        </span>
+        <button class="bannerBtn1"><a href="Contact.html">
+                Reach Out <img class="arrow" src="../Icons/Chevron-Right.svg"></a>
+        </button>
+    </div>
+
+    <div class="banner-3">
+        <img class="banner-3-image" src="../Photos/Footer%20-%20Map.png">
+        <span class="banner-3-text">
+            107 - 117 SCIENCE PLACE
+        </span>
+    </div>
+
+    <div class="footer">
+        <span class="copyRight">
+            &#9400; NO NILK COFFEE
+        </span>
+        <span class="address">
+            107 - 117 SCIENCE PLACE
+            <br>SASKATOON, SK
+        </span>
+        <span class="photo-by">
+            PHOTOGRAPHY BY
+        </span>
+        <span class="author">
+            Visualhunt
+            <br>Stumptown Coffee Roasters
+        </span>
+    </div>
+
+    <script>
+        setCart();
+        displayCart();
+    </script>
+</body>
+</html>

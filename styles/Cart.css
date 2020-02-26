@@ -1,0 +1,890 @@
+@font-face {
+    font-family: "Eusthalia Sans Slant";
+    src: url("../Fonts/eusthalia_sans_slant-webfont.woff") format("woff"),
+        url("../Fonts/Eusthalia Sans Slant.otf") format("opentype"),
+        url("../Fonts/eusthalia_sans_slant-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato Light";
+    src: url("../Fonts/lato-light-webfont.woff") format("woff"),
+        url("../Fonts/Lato-Light.ttf") format("ttf"),
+        url("../Fonts/lato-light-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Odachi";
+    src: url("../Fonts/odachi-webfont.woff") format("woff"), url("../Fonts/Odachi.otf") format("ttf"),
+        url("../Fonts/odachi-webfont.woff2") format("woff2");
+}
+
+body {
+    background: #FFFF;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav {
+    width: 50%;
+    position: absolute;
+    display: inline;
+    height: 4vw;
+    top: 2vw;
+    left: 0.5vw;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+    left: 0;
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-item {
+    position: relative;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.25vw;
+    margin-left: 2vw;
+    float: left;
+    text-align: left;
+    z-index: 1;
+}
+
+.menu-item::after {
+    position: absolute;
+    bottom: -10%;
+    height: 40%;
+    content: '';
+    background-color: #EADFC0;
+    left: -10%;
+    width: 120%;
+    z-index: -1;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #300306;
+}
+
+.menu-item a:hover::after {
+    position: absolute;
+    bottom: -22%;
+    height: 40%;
+    content: '';
+    background-color: #DA4E31;
+    left: -10%;
+    width: 120%;
+    z-index: 0;
+}
+
+#itemCount {
+    position: absolute;
+    display: none;
+    top: 1.4vw;
+    right: -28.5vw;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8vw;
+    font-weight: 600;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: "Eusthalia Sans Slant";
+}
+
+.header-banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.header-banners-inside {
+    position: relative;
+    display: inline-block;
+    float: left;
+    background-image: url("../Photos/Header - Coffee Cup - Wide.png");
+    background-size: cover;
+    width: 60vw;
+    height: 32.5vw;
+    left: 0%;
+    text-align: center;
+}
+
+.header-banner-text-inside {
+    position: absolute;
+    top: 16%;
+    left: 35%;
+    width: 35%;
+    height: 55%;
+    font-family: "Odachi", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.small-text-inside {
+    font-size: 8vw;
+}
+
+.large-text-inside {
+    position: absolute;
+    top: 24%;
+    left: 6%;
+    font-size: 14vw;
+}
+
+.menu-item-cart-underline {
+    position: absolute;
+    top: 3.85vw;
+    left: 56.5vw;
+    width: 2.6vw;
+    height: 0.75vw;
+    background-color: #EADFC0;
+    z-index: 0;
+}
+
+.menu-item-cart {
+    position: absolute;
+    top: 2.4vw;
+    left: 57vw;
+    width: 1.75vw;
+    height: 2vw;
+    background-image: url("../Icons/Cart.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.feature1 {
+    text-align: center;
+    margin-top: 5%;
+    /*leave or not?*/
+}
+
+.feature-text1 {
+    position: relative;
+    display: inline;
+    font-family: "Odachi";
+    font-size: 10vw;
+}
+
+.feature-text1::after {
+    position: absolute;
+    bottom: 13%;
+    height: 26%;
+    content: '';
+    background-color: #EADFC0;
+    left: -6.5%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 108%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.feature2 {
+    position: relative;
+    padding-top: 0.5vw;
+    display: block;
+    text-align: center;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+    margin-bottom: 6vw;
+}
+
+.coffee-menu {
+    margin: auto;
+    width: 69vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+}
+
+.coffee-menu-item {
+    display: inline;
+    width: 32.7vw;
+    margin-bottom: 2vw;
+}
+
+.left {
+    float: left;
+}
+
+.coffee-menu-item {
+    display: inline;
+    width: 32.7vw;
+    margin-bottom: 2vw;
+}
+
+.right {
+    float: right;
+}
+
+.coffee-menu-item-product {
+    display: inline;
+}
+
+.coffee-menu-item-cost {
+    display: inline;
+    width: 3vw;
+    text-align: center;
+    float: right;
+}
+
+.banner-1 {
+    position: relative;
+    width: 78vw;
+    margin-top: 16vw;
+    /*margin-left: 22vw;*/
+    left: 22vw;
+    height: 24vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+}
+
+.banner-1-image {
+    position: absolute;
+    bottom: 5vw;
+    left: -15vw;
+    width: 25vw;
+}
+
+.banner-1-subtitle {
+    position: absolute;
+    font-size: 1.75vw;
+    top: 6vw;
+    left: 19vw;
+}
+
+.banner-1-title {
+    position: absolute;
+    font-size: 4.3vw;
+    top: 9vw;
+    left: 19vw;
+    z-index: 0;
+}
+
+.banner-1-title::after {
+    position: absolute;
+    bottom: -4%;
+    height: 45%;
+    content: '';
+    background-color: #DA4E31;
+    left: -.5%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 103%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.cart-header {
+    margin: 0;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 2vw;
+    color: #300306;
+    width: 69%;
+    position: relative;
+    left: 15vw;
+    /*    background-color: aqua;*/
+    z-index: 10;
+    margin-top: 3vw;
+}
+
+.cart-header::after {
+    content: "";
+    height: 1vw;
+    background-color: #DA4E31;
+    width: 100%;
+    position: absolute;
+    top: 2.3vw;
+    left: 0;
+    z-index: -3;
+    padding-bottom: 0.1em;
+}
+
+#item {
+    padding-right: 30vw;
+}
+
+#quantity {
+    padding-right: 12vw;
+}
+
+.bottom-line {
+    background-color: #DA4E31;
+    height: 0.1vw;
+    margin: 0;
+    width: 69%;
+    position: relative;
+    left: 15vw;
+}
+
+#show-cart {
+    font-family: "Eusthalia Sans Slant";
+    color: #300306;
+    font-size: 1vw;
+    text-align: left;
+    line-height: 4;
+    position: relative;
+    left: 15vw;
+}
+
+.item-count {
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    width: 3vw;
+    text-align: center;
+    /*    margin-left: 25vw;*/
+}
+
+.subtract-item {
+    height: 2vw;
+    width: 2vw;
+    background-color: #DA4E31;
+    color: white;
+    font-size: 1vw;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.plus-item {
+    height: 2vw;
+    width: 2vw;
+    background-color: lightgreen;
+    color: white;
+    font-size: 1vw;
+    font-weight: 700;
+    text-align: right;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.delete-item {
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50px;
+    background-color: #DA4E31;
+    color: white;
+    font-size: 1vw;
+    font-weight: 700;
+    text-align: center;
+    /*    margin-left: 10px;*/
+}
+
+#line {
+    height: 0.1vw;
+    background-color: #DA4E31;
+    width: 66%;
+    position: relative;
+    margin: 0;
+}
+
+#line::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    background-color: #DA4E31;
+    height: 0.5vw;
+}
+
+#amount {
+    background-color: #EADFC0;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    line-height: 3;
+    width: 50%;
+    position: relative;
+    right: -46vw;
+    padding-left: 40px;
+    padding-top: 5px;
+    margin: 0;
+}
+
+.calculate {
+    width: 100%;
+    margin: 0;
+}
+
+#total-count {
+    padding-left: 15vw;
+}
+
+#subtotal-cost {
+    padding-left: 20vw;
+}
+
+#total-cost {
+    padding-left: 22vw;
+}
+
+.clear-cart {
+    background-color: #DA4E31;
+    color: #EADFC0;
+    font-size: 1.5vw;
+    height: 3vw;
+    font-family: "Eusthalia Sans Slant";
+    border-radius: 50px;
+    width: 33vw;
+}
+
+#notification {
+    visibility: hidden;
+    min-width: 200px;
+    margin-left: -125px;
+    background-color: #300C06;
+    color: #EADFC0;
+    font-family: "Eusthalia Sans Slant";
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 12px;
+    border-radius: 50px;
+}
+
+#notification.display {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#content {
+    /*    background-color: red;*/
+    height: 70vw;
+    position: relative;
+}
+
+.title {
+    text-align: center;
+    height: 15vw;
+    /*    background-color: green;*/
+    margin-top: 6vw;
+}
+
+.inputInfor {
+    background-color: #DBDBDB;
+    height: 4vh;
+    width: 22vw;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.billing {
+    /*    background-color: pink;*/
+    height: 15vw;
+    width: 25%;
+    position: relative;
+    left: 25vw;
+}
+
+#first {
+    position: absolute;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#address1 {
+    position: absolute;
+    top: 4vw;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#city {
+    position: absolute;
+    top: 8vw;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#code {
+    position: absolute;
+    top: 12vw;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+.billing1 {
+    /*    background-color: lemonchiffon;*/
+    height: 15vw;
+    width: 25%;
+    position: absolute;
+    left: 50vw;
+    top: 15vw;
+}
+
+#last {
+    position: absolute;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#address2 {
+    position: absolute;
+    top: 4vw;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#province {
+    position: absolute;
+    top: 8vw;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+#country {
+    position: absolute;
+    top: 12vw;
+    font-size: 2vw;
+    font-family: monospace;
+    color: chocolate;
+}
+
+::placeholder {
+    color: #300C06;
+    opacity: 1;
+    font-size: 1vw;
+    font-family: Eusthalia Sans Slant;
+    font-weight: 100;
+}
+
+.payment {
+    /*    background-color: aqua;*/
+    height: 20vw;
+    position: relative;
+}
+
+#name {
+    position: absolute;
+    left: 25vw;
+}
+
+#creditcard {
+    position: absolute;
+    left: 25vw;
+    top: 5vw;
+    width: 35vw;
+}
+
+#date {
+    position: absolute;
+    left: 25vw;
+    top: 10vw;
+}
+
+#security {
+    position: absolute;
+    right: 26vw;
+    top: 10vw;
+}
+
+#master {
+    position: absolute;
+    right: 32vw;
+    top: 5vw;
+    width: 60px;
+    height: 40px;
+}
+
+#visa {
+    position: absolute;
+    top: 5vw;
+    right: 26vw;
+    width: 60px;
+    height: 40px;
+}
+
+#submit {
+    position: absolute;
+    left: 38vw;
+    font-family: Eusthalia Sans Slant;
+    color: #EADFC0;
+    background-color: #300C06;
+    font-size: 1.5vw;
+    margin-top: 12vw;
+    /*padding-top: 5px 5px 5px 5px;*/
+    height: 3vw;
+    width: 20vw;
+}
+
+.banner-2 {
+    position: relative;
+    width: 72vw;
+    margin-top: 12vw;
+    left: 0vw;
+    height: 25vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+    max-width: 100%;
+}
+
+.banner-2-image {
+    position: absolute;
+    bottom: 5vw;
+    right: -17vw;
+    width: 37vw;
+}
+
+.banner-2-header {
+    position: absolute;
+    font-size: 2.5vw;
+    top: 3vw;
+    left: 15vw;
+}
+
+.banner-2-text {
+    position: absolute;
+    font-family: "Lato Light";
+    font-size: 1.8vw;
+    top: 8vw;
+    left: 15vw;
+    z-index: 0;
+}
+
+.bannerBtn {
+    position: absolute;
+    font-size: 1.75vw;
+    top: 17vw;
+    left: 54vw;
+    z-index: 3;
+    background-color: #300306;
+    color: #EADFC0;
+    font-family: "Eusthalia Sans Slant";
+    height: 3.7vw;
+    width: 16vw;
+    margin: 0;
+    padding: 0;
+}
+
+.sandwiches-menu {
+    margin: auto;
+    width: 69vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+}
+
+.sandwiches-item {
+    display: inline;
+    width: 32.7vw;
+    margin-bottom: 2vw;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.bottom {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+}
+
+.sandwiches-item-product {
+    display: inline;
+}
+
+.sandwiches-item-cost {
+    display: inline;
+    width: 3vw;
+    text-align: center;
+    float: right;
+}
+
+.sandwiches-item-description {
+    display: inline;
+    width: 3vw;
+    text-align: center;
+    float: right;
+    font-family: "Lato Light";
+    column-count: 2;
+    width: 190px;
+    height: 5vw;
+    background-color: red;
+    padding-top: 40px;
+    position: relative;
+    right: 40%;
+    z-index: -1;
+}
+
+.bannerBtn1 {
+    position: absolute;
+    font-size: 1.75vw;
+    top: 19vw;
+    left: 15vw;
+    z-index: 3;
+    background-color: #300306;
+    color: #EADFC0;
+    font-family: "Eusthalia Sans Slant";
+    height: 3.7vw;
+    width: 16vw;
+    margin: 0;
+    padding: 0;
+}
+
+.arrow {
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.text-rhs {
+    font-family: "Eusthalia Sans Slant", sans-serif;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+}
+
+.banner-3 {
+    position: relative;
+    width: 79vw;
+    margin-top: 17vw;
+    left: 22vw;
+    height: 24vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+}
+
+.banner-3-image {
+    position: absolute;
+    bottom: 5vw;
+    left: -8vw;
+    width: 68vw;
+    z-index: 10;
+}
+
+.banner-3-text {
+    position: absolute;
+    font-size: 1.75vw;
+    top: 12vw;
+    left: 32vw;
+    z-index: 10;
+}
+
+.banner-3-text::after {
+    position: absolute;
+    bottom: -4%;
+    height: 45%;
+    content: '';
+    background-color: #DA4E31;
+    top: 60%;
+    left: -1%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 103%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.footer {
+    position: relative;
+    background-color: #300306;
+    height: 10vw;
+    width: 102%;
+}
+
+.copyRight {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 2vw;
+    left: 14.3vw;
+}
+
+.address {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 4.5vw;
+    left: 14.3vw;
+}
+
+.photo-by {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 2.5vw;
+    right: 18vw;
+    text-align: right;
+}
+
+.author {
+    color: white;
+    font-family: "Lato Light";
+    font-size: 1vw;
+    position: absolute;
+    top: 4.3vw;
+    right: 18vw;
+    text-align: right;
+}
+
+.distance {
+    display: inline-block;
+    /*background-color: yellow;*/
+    width: 15vw;
+    text-align: left;
+}
+
+.space {
+    display: inline;
+    /*background-color: blue;*/
+    width: 10vw;
+    text-align: center;
+    margin-left: 20vw;
+}
+
+.space4 {
+    display: inline-block;
+    text-align: center;
+    margin-left: 0vw;
+}
+
+.space2 {
+    display: inline-block;
+    /*background-color: purple;*/
+    width: 3vw;
+    text-align: left;
+}
+
+.distance2 {
+    display: inline-block;
+    /*background-color: lawngreen;*/
+    width: 5vw;
+    text-align: right;
+    margin-left: 13vw;
+}
+
+.distance3 {
+    display: inline-block;
+    /*background-color: lightblue;*/
+    width: 2vw;
+    margin-left: 1vw;
+}

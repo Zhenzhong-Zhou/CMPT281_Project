@@ -1,0 +1,574 @@
+@font-face {
+    font-family: "Eusthalia Sans Slant";
+    src: url("../Fonts/eusthalia_sans_slant-webfont.woff") format("woff"),
+        url("../Fonts/Eusthalia Sans Slant.otf") format("opentype"),
+        url("../Fonts/eusthalia_sans_slant-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Lato Light";
+    src: url("../Fonts/lato-light-webfont.woff") format("woff"),
+        url("../Fonts/Lato-Light.ttf") format("ttf"),
+        url("../Fonts/lato-light-webfont.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Odachi";
+    src: url("../Fonts/odachi-webfont.woff") format("woff"), url("../Fonts/Odachi.otf") format("ttf"),
+        url("../Fonts/odachi-webfont.woff2") format("woff2");
+}
+
+body {
+    background: #FFFF;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+nav {
+    width: 50%;
+    position: absolute;
+    display: inline;
+    height: 4vw;
+    top: 2vw;
+    left: 0.5vw;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+    left: 0;
+    top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-item {
+    position: relative;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.25vw;
+    margin-left: 2vw;
+    float: left;
+    text-align: left;
+    z-index: 1;
+}
+
+.menu-item::after {
+    position: absolute;
+    bottom: -10%;
+    height: 40%;
+    content: '';
+    background-color: #EADFC0;
+    left: -10%;
+    width: 120%;
+    z-index: -1;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #300306;
+}
+
+.menu-item a:hover::after {
+    position: absolute;
+    bottom: -22%;
+    height: 40%;
+    content: '';
+    background-color: #DA4E31;
+    left: -10%;
+    width: 120%;
+    z-index: 0;
+}
+
+#itemCount {
+    position: absolute;
+    display: none;
+    /*    display: block;*/
+    top: 1.3vw;
+    right: -28.7vw;
+    width: 1.5vw;
+    height: 1.5vw;
+    font-size: 1.3vw;
+    font-weight: 600;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+/*
+#total-count {
+    display: none;
+    background-color: aqua;
+    position: absolute;
+    top: 1.5vw;
+    right: -28.5vw;
+    width: 15px;
+    height: 15px;
+    font-size: 10pt;
+    font-weight: 600;
+    border-radius: 50%;
+    z-index: 1;
+}
+*/
+
+#notification {
+    visibility: hidden;
+    min-width: 200px;
+    margin-left: -125px;
+    background-color: #300C06;
+    color: #EADFC0;
+    font-family: Eusthalia Sans Slant;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 12px;
+    border-radius: 50px;
+}
+
+#notification.display {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.header-banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.header-banners-inside {
+    position: relative;
+    display: inline-block;
+    float: left;
+    background-image: url("../Photos/Header - Coffee Cup - Wide.png");
+    background-size: cover;
+    width: 60vw;
+    height: 32.5vw;
+    left: 0%;
+    text-align: center;
+}
+
+.header-banner-text-inside {
+    position: absolute;
+    top: 16%;
+    left: 35%;
+    width: 35%;
+    height: 55%;
+    font-family: "Odachi", sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.small-text-inside {
+    font-size: 8vw;
+}
+
+.large-text-inside {
+    position: absolute;
+    top: 24%;
+    left: 6%;
+    font-size: 14vw;
+}
+
+.menu-item-cart-underline {
+    position: absolute;
+    top: 3.85vw;
+    left: 56.5vw;
+    width: 2.6vw;
+    height: 0.75vw;
+    background-color: #EADFC0;
+    z-index: 0;
+}
+
+.menu-item-cart {
+    position: absolute;
+    top: 2.4vw;
+    left: 57vw;
+    width: 1.75vw;
+    height: 2vw;
+    background-image: url("../Icons/Cart.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.feature1 {
+    text-align: center;
+    margin-top: 3vw;
+    /*leave or not?*/
+}
+
+.feature-text1 {
+    position: relative;
+    display: inline;
+    font-family: "Odachi";
+    font-size: 10vw;
+}
+
+.feature-text1::after {
+    position: absolute;
+    bottom: 13%;
+    height: 26%;
+    content: '';
+    background-color: #EADFC0;
+    left: -6.5%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 108%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.menu-coffee {
+    /*    background-color: red;*/
+    height: 35vw;
+    width: 100%;
+    position: relative;
+}
+
+.item {
+    /*    background-color: yellow;*/
+    height: 35vw;
+    width: 28vw;
+    position: relative;
+    right: -20vw;
+    margin-top: 2vw;
+}
+
+.coffee {
+    height: 25vw;
+    width: 20vw;
+    text-align: center;
+}
+
+.space {
+    padding-left: 14vw;
+}
+
+.item1 {
+    /*    background-color: pink;*/
+    height: 35vw;
+    position: absolute;
+    right: -32vw;
+    top: 0;
+    list-style: none;
+    width: 28vw;
+}
+
+.coffee1 {
+    height: 25vw;
+    width: 20vw;
+}
+
+.type {
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.2vw;
+    font-weight: 100;
+    width: 45vw;
+    margin: 0;
+}
+
+.name {
+    font-family: "Lato Light";
+    font-size: 1.3vw;
+    margin: 0;
+    line-height: 2;
+}
+
+.add-to-cart {
+    color: #EADFC0;
+    background-color: #300306;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+    width: 13vw;
+    position: absolute;
+    left: 6vw;
+    top: 30vw;
+    margin: 0;
+}
+
+.banner-1 {
+    position: relative;
+    width: 78vw;
+    margin-top: 22vw;
+    /*margin-left: 22vw;*/
+    left: 22vw;
+    height: 19vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+}
+
+.banner-1-image {
+    position: absolute;
+    bottom: 5vw;
+    left: -7vw;
+    width: 25vw;
+}
+
+.banner-1-title {
+    position: absolute;
+    font-size: 2vw;
+    top: 4vw;
+    left: 15vw;
+    z-index: 0;
+    height: 4vw;
+    width: 25vw;
+}
+
+.banner-1-text {
+    position: absolute;
+    font-family: "Lato Light";
+    font-size: 1.8vw;
+    top: 8vw;
+    left: 15vw;
+    z-index: 0;
+}
+
+.equipment-menu {
+    /*    background-color: gold;*/
+    position: relative;
+    height: 85vw;
+}
+
+.product {
+    /*    background-color: palevioletred;*/
+    height: 37vw;
+    width: 37vw;
+    margin-top: 3vw;
+    position: relative;
+    left: 10vw;
+}
+
+.product1 {
+    /*    background-color: yellowgreen;*/
+    height: 37vw;
+    width: 37vw;
+    position: absolute;
+    top: 0;
+    left: 52vw;
+}
+
+.product2 {
+    /*    background-color: palegreen;*/
+    height: 42vw;
+    width: 40vw;
+    position: absolute;
+    left: 28vw;
+    margin-top: 4vw;
+}
+
+.equipment {
+    height: 25vw;
+    width: 19vw;
+    margin-left: 10vw;
+}
+
+.equipment1 {
+    height: 25vw;
+    width: 16vw;
+    margin-left: 8vw;
+}
+
+.equipment2 {
+    height: 25vw;
+    width: 30vw;
+    margin-left: 5vw;
+}
+
+.type1 {
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.6vw;
+    font-weight: 100;
+    width: 45vw;
+    margin: 0;
+}
+
+#space1 {
+    padding-left: 25vw;
+}
+
+#space2 {
+    padding-left: 8vw;
+}
+
+.descript {
+    margin: 0;
+    line-height: 1.3;
+    width: 39vw;
+    margin-top: 0.5vw;
+    font-size: 1.6vw;
+    font-weight: 100;
+}
+
+.descript1 {
+    margin: 0;
+    line-height: 1.3;
+    width: 35vw;
+    margin-top: 0.5vw;
+    font-size: 1.6vw;
+    font-weight: 100;
+}
+
+#btn {
+    color: #EADFC0;
+    background-color: #300306;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+    width: 13vw;
+    position: absolute;
+    left: 10vw;
+    top: 33.5vw;
+    margin: 0;
+}
+
+#btn1 {
+    color: #EADFC0;
+    background-color: #300306;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1.5vw;
+    width: 13vw;
+    position: absolute;
+    left: 10vw;
+    top: 37.5vw;
+    margin: 0;
+}
+
+.banner-2 {
+    position: relative;
+    width: 72vw;
+    margin-top: 12vw;
+    /*margin-right: 28vw;*/
+    left: 0vw;
+    height: 25vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+    max-width: 100%;
+}
+
+.banner-2-image {
+    position: absolute;
+    bottom: 5vw;
+    right: -17vw;
+    width: 37vw;
+}
+
+.banner-2-header {
+    position: absolute;
+    font-size: 2.5vw;
+    top: 3vw;
+    left: 15vw;
+}
+
+.banner-2-text {
+    position: absolute;
+    font-family: "Lato Light";
+    font-size: 1.8vw;
+    top: 8vw;
+    left: 15vw;
+    z-index: 0;
+}
+
+.text-rhs {
+    font-family: "Eusthalia Sans Slant", sans-serif;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+}
+
+.banner-3 {
+    position: relative;
+    width: 78vw;
+    margin-top: 17vw;
+    left: 22vw;
+    height: 24vw;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 3vw;
+    background-color: #EADFC0;
+}
+
+.banner-3-image {
+    position: absolute;
+    bottom: 5vw;
+    left: -8vw;
+    width: 68vw;
+    z-index: 10;
+}
+
+.banner-3-text {
+    position: absolute;
+    font-size: 1.75vw;
+    top: 12vw;
+    left: 32vw;
+    z-index: 10;
+}
+
+.banner-3-text::after {
+    position: absolute;
+    bottom: -4%;
+    height: 45%;
+    content: '';
+    background-color: #DA4E31;
+    top: 60%;
+    left: -1%;
+    /* offset the left to account for half of the extended length (10% / 2) */
+    width: 103%;
+    /* extend the length a little bit */
+    z-index: -1;
+}
+
+.footer {
+    position: relative;
+    background-color: #300306;
+    height: 10vw;
+}
+
+.copyRight {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 2vw;
+    left: 14.3vw;
+}
+
+.address {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 4.5vw;
+    left: 14.3vw;
+}
+
+.photo-by {
+    color: white;
+    font-family: "Eusthalia Sans Slant";
+    font-size: 1vw;
+    position: absolute;
+    top: 2.5vw;
+    right: 18vw;
+    text-align: right;
+}
+
+.author {
+    color: white;
+    font-family: "Lato Light";
+    font-size: 1vw;
+    position: absolute;
+    top: 4.3vw;
+    right: 18vw;
+    text-align: right;
+}
