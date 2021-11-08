@@ -1,6 +1,6 @@
 # CMPT281
 
-This is pure statics website. It is only can preview in local URL.
+It is a pure and simple static website. It is only can preview in local URL.
 
 ### Homepage
 ![](images/homepage.png)
